@@ -1,4 +1,4 @@
-id: org.prismlauncher.PrismLauncher
+id: org.unmojang.FjordLauncher
 runtime: org.kde.Platform
 runtime-version: "6.7"
 sdk: org.kde.Sdk
@@ -7,7 +7,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
   - org.freedesktop.Sdk.Extension.openjdk8
 
-command: prismlauncher
+command: fjordlauncher
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -32,7 +32,7 @@ modules:
   # Needed for proper Wayland support
   - libdecor.json
 
-  - name: prismlauncher
+  - name: fjordlauncher
     buildsystem: cmake-ninja
     builddir: true
     config-opts:
@@ -44,13 +44,13 @@ modules:
         JAVA_COMPILER: /usr/lib/sdk/openjdk17/jvm/openjdk-17/bin/javac
     sources:
       - type: archive
-        url: https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-8.3.tar.gz
-        sha256: 4d587122f673ee4daea5aa098bd3da0f51989dbb600560146dd8a0375491cea0
+        url: https://github.com/unmojang/FjordLauncher/releases/download/8.3.2/FjordLauncher-8.3.2.tar.gz
+        sha256: 56ef6cf8aa9775e84a67d60e13220ab626539b8dd25759aee2281c7172ec7d3b
         x-checker-data:
           type: json
-          url: https://api.github.com/repos/PrismLauncher/PrismLauncher/releases/latest
+          url: https://api.github.com/repos/unmojang/FjordLauncher/releases/latest
           version-query: .tag_name
-          url-query: .assets[] | select(.name == "PrismLauncher-" + $version + ".tar.gz")
+          url-query: .assets[] | select(.name == "FjordLauncher-" + $version + ".tar.gz")
             | .browser_download_url
 
   - name: openjdk
@@ -158,10 +158,10 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm755 prime-run /app/bin/prime-run
-      - mv /app/bin/prismlauncher /app/bin/prismrun
-      - install -Dm755 prismlauncher /app/bin/prismlauncher
+      - mv /app/bin/fjordlauncher /app/bin/fjordrun
+      - install -Dm755 fjordlauncher /app/bin/fjordlauncher
     sources:
       - type: file
         path: prime-run
       - type: file
-        path: prismlauncher
+        path: fjordlauncher
