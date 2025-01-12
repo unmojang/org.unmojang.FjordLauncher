@@ -1,6 +1,6 @@
 id: org.unmojang.FjordLauncher
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.8'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
@@ -50,8 +50,8 @@ modules:
         JAVA_COMPILER: /usr/lib/sdk/openjdk17/jvm/openjdk-17/bin/javac
     sources:
       - type: archive
-        url: https://github.com/unmojang/FjordLauncher/releases/download/9.1.0/FjordLauncher-9.1.0.tar.gz
-        sha256: bd95bfc4e6e2b7fa3651b597814f242359fda292d2f590ad7d056b1c2fc144ac
+        url: https://github.com/unmojang/FjordLauncher/releases/download/9.2.0/FjordLauncher-9.2.0.tar.gz
+        sha256: 86d2a8aac2efc88fd101bd95b1584a141e3f67a3f34b2c9647385b839f8083e4
         x-checker-data:
           type: json
           url: https://api.github.com/repos/unmojang/FjordLauncher/releases/latest
@@ -81,8 +81,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.2.tar.xz
-        sha256: c8bee4790d9058bacc4b6246456c58021db58a87ddda1a9d0139bf5f18f1f240
+        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.3.tar.xz
+        sha256: f8dd7566adb74147fab9964680b6bbadee87cf406a7fcff51718a5e6949b841c
         x-checker-data:
           type: anitya
           project-id: 14957
