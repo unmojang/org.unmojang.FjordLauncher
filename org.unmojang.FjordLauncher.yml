@@ -50,8 +50,8 @@ modules:
         JAVA_COMPILER: /usr/lib/sdk/openjdk17/jvm/openjdk-17/bin/javac
     sources:
       - type: archive
-        url: https://github.com/unmojang/FjordLauncher/releases/download/9.2.4/FjordLauncher-9.2.4.tar.gz
-        sha256: c700c4a60b4615a24db19464286f8dd535d099e7418646d60518f891a9a94e07
+        url: https://github.com/unmojang/FjordLauncher/releases/download/9.3.0/FjordLauncher-9.3.0.tar.gz
+        sha256: de74d12eb54bd9e665ac88ea1f655c0c7594e140999712549bbb72bf65e08e2a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/unmojang/FjordLauncher/releases/latest
