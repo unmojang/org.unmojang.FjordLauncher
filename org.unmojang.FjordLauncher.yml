@@ -51,8 +51,8 @@ modules:
         JAVA_COMPILER: /usr/lib/sdk/openjdk17/jvm/openjdk-17/bin/javac
     sources:
       - type: archive
-        url: https://github.com/unmojang/FjordLauncher/releases/download/10.0.5.0/FjordLauncher-10.0.5.0.tar.gz
-        sha256: 0a941558b612ca47c084ecbd1157ce27039b0555124a75db489ba105a6268507
+        url: https://github.com/unmojang/FjordLauncher/releases/download/11.0.0.0/FjordLauncher-11.0.0.0.tar.gz
+        sha256: 76874c72d7b4ad2f7a571f6fef22a1a189486155ec5627f7154dd49efd28b6ae
         x-checker-data:
           type: json
           url: https://api.github.com/repos/unmojang/FjordLauncher/releases/latest
@@ -121,33 +121,6 @@ modules:
       - /include
       - /lib/pkgconfig
       - /lib/libgamemodeauto.a
-
-  - name: glxinfo
-    buildsystem: meson
-    config-opts:
-      - --bindir=/app/mesa-demos
-      - -Degl=disabled
-      - -Dglut=disabled
-      - -Dosmesa=disabled
-      - -Dvulkan=disabled
-      - -Dwayland=disabled
-    post-install:
-      - mv -v /app/mesa-demos/glxinfo /app/bin
-    sources:
-      - type: archive
-        url: https://archive.mesa3d.org/demos/mesa-demos-9.0.0.tar.xz
-        sha256: 3046a3d26a7b051af7ebdd257a5f23bfeb160cad6ed952329cdff1e9f1ed496b
-        x-checker-data:
-          type: anitya
-          project-id: 16781
-          stable-only: true
-          url-template: https://archive.mesa3d.org/demos/mesa-demos-$version.tar.xz
-    cleanup:
-      - /include
-      - /mesa-demos
-      - /share
-    modules:
-      - shared-modules/glu/glu-9.json
 
   - name: enhance
     buildsystem: simple
