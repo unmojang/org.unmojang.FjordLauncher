@@ -50,11 +50,15 @@ modules:
         JAVA_HOME: /usr/lib/sdk/openjdk17/jvm/openjdk-17
         JAVA_COMPILER: /usr/lib/sdk/openjdk17/jvm/openjdk-17/bin/javac
     sources:
-      # TODO return to type: archive
-      # Hotfix for missing description in org.unmojang.FjordLauncher.metainfo.xml.in in 11.0.0.0 release
-      - type: git
-        url: https://github.com/unmojang/FjordLauncher.git
-        commit: 2907c217fb1bb3ed20e6b51eecd7acdf86490846
+      - type: archive
+        url: https://github.com/unmojang/FjordLauncher/releases/download/11.0.2.0/FjordLauncher-11.0.2.0.tar.gz
+        sha256: 42a41d28d8f20f0f40136493332e5dcb4e29089d6046c7d7635796469591b4d4
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/unmojang/FjordLauncher/releases/latest
+          version-query: .tag_name
+          url-query: .assets[] | select(.name == "FjordLauncher-" + $version + ".tar.gz")
+            | .browser_download_url
 
   - name: glfw
     buildsystem: cmake-ninja
