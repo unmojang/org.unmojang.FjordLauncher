@@ -51,8 +51,8 @@ modules:
         JAVA_COMPILER: /usr/lib/sdk/openjdk17/jvm/openjdk-17/bin/javac
     sources:
       - type: archive
-        url: https://github.com/unmojang/FjordLauncher/releases/download/11.0.2.0/FjordLauncher-11.0.2.0.tar.gz
-        sha256: 42a41d28d8f20f0f40136493332e5dcb4e29089d6046c7d7635796469591b4d4
+        url: https://github.com/unmojang/FjordLauncher/releases/download/11.0.3.0/FjordLauncher-11.0.3.0.tar.gz
+        sha256: c135a0e1b285cd9eeeac6b50b67c77b644d809a2cc0486a073d0f495326799af
         x-checker-data:
           type: json
           url: https://api.github.com/repos/unmojang/FjordLauncher/releases/latest
@@ -86,8 +86,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.3.tar.xz
-        sha256: f8dd7566adb74147fab9964680b6bbadee87cf406a7fcff51718a5e6949b841c
+        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.4.tar.xz
+        sha256: 2cafccb2aaf2491a4068676117a0d4f90ab307724b96fffc54cd1da953779400
         x-checker-data:
           type: anitya
           project-id: 14957
